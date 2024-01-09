@@ -1,0 +1,13 @@
+name: Issues
+on:
+  issues:
+    types: [opened, edited, milestoned]
+jobs:
+  issues:
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: ./04
+    steps:
+      - name: echo
+        run: echo ${{ toJSON(github.event.issue) }}

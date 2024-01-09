@@ -1,0 +1,32 @@
+name: Lint, Test and Deploy
+on: [push, workflow_dispatch]
+jobs:
+  lt:
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: ./04
+    steps:
+      - name: Get code
+        uses: actions/checkout@v3
+      - name: Install NodeJS
+        uses: actions/setup-node@v3
+        with:
+          node-version: 18
+      - name: Install dependencies
+        run: npm run ci
+      - name: Build app
+        run: npm run build
+      - name: Lint
+        run: npm run lint
+      - name: Run tests
+        run: npm run test
+  deploy:
+    needs: test
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: ./04
+    steps: 
+      - name: Deploy
+        run: echo "Deploying..."
