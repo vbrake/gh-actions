@@ -22,7 +22,6 @@ jobs:
       - name: Run tests
         run: npm run test
   deploy:
-    needs: test
     runs-on: ubuntu-latest
     defaults:
       run:
