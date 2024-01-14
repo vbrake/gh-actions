@@ -13,8 +13,8 @@ jobs:
         working-directory: ./06    
     env:
       MONGODB_CLUSTER_ADDRESS: cluster0.7cslpxl.mongodb.net
-      MONGODB_USERNAME: vbrake
-      MONGODB_PASSWORD: KhI9gr9XvgI7sT1q
+      MONGODB_USERNAME: ${{ secrets.MONGODB_USERNAME }}
+      MONGODB_PASSWORD: ${{ secrets.MONGODB_PASSWORD }}
       PORT: 8080
     environment: testing
     runs-on: ubuntu-latest
