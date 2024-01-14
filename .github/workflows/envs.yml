@@ -8,6 +8,9 @@ env:
   MONGODB_DB_NAME: gha-demo
 jobs:
   test:
+    defaults:
+      run:
+        working-directory: ./06    
     env:
       MONGODB_CLUSTER_ADRESS: cluster0.7cslpxl.mongodb.net
       MONGODB_USERNAME: vbrake
