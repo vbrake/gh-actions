@@ -12,7 +12,7 @@ jobs:
       run:
         working-directory: ./06    
     env:
-      MONGODB_CLUSTER_ADRESS: cluster0.7cslpxl.mongodb.net
+      MONGODB_CLUSTER_ADDRESS: cluster0.7cslpxl.mongodb.net
       MONGODB_USERNAME: vbrake
       MONGODB_PASSWORD: KhI9gr9XvgI7sT1q
       PORT: 8080
