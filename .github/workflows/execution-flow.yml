@@ -93,5 +93,5 @@ jobs:
     steps:
       - name: Output information
         run: |
-        echo "Something went wrong"
-        echo "${{ github }}"
+          echo "Something went wrong"
+          echo "${{ github }}"
