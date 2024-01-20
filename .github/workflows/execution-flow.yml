@@ -16,7 +16,7 @@ jobs:
         id: cache
         uses: actions/cache@v3
         with:
-          path: ~/.npm
+          path: ~/07/.npm
           key: deps-node-modules-${{ hashFiles('**/package-lock.json') }}
       - name: Install dependencies
         run: npm ci
@@ -34,7 +34,7 @@ jobs:
         id: cache
         uses: actions/cache@v3
         with:
-          path: ~/.npm
+          path: ~/07/.npm
           key: deps-node-modules-${{ hashFiles('**/package-lock.json') }}
       - name: Install dependencies
         run: npm ci
@@ -45,8 +45,8 @@ jobs:
         if: failure() && steps.run-tests.outcome == 'failure'
         uses: actions/upload-artifact@v3
         with:
-          name: test-report
-          path: test.json
+          name: 07/test-report
+          path: 07/test.json
   build:
     defaults:
       run:
@@ -60,7 +60,7 @@ jobs:
         id: cache
         uses: actions/cache@v3
         with:
-          path: ~/.npm
+          path: ~/07/.npm
           key: deps-node-modules-${{ hashFiles('**/package-lock.json') }}
       - name: Install dependencies
         run: npm ci
@@ -70,8 +70,8 @@ jobs:
       - name: Upload artifacts
         uses: actions/upload-artifact@v3
         with:
-          name: dist-files
-          path: dist
+          name: 07/dist-files
+          path: 07/dist
   deploy:
     defaults:
       run:
