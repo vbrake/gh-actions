@@ -45,8 +45,8 @@ jobs:
         if: failure() && steps.run-tests.outcome == 'failure'
         uses: actions/upload-artifact@v3
         with:
-          name: 07/test-report
-          path: 07/test.json
+          name: test-report
+          path: ./07/test.json
   build:
     defaults:
       run:
@@ -70,7 +70,7 @@ jobs:
       - name: Upload artifacts
         uses: actions/upload-artifact@v3
         with:
-          name: 07/dist-files
+          name: dist-files
           path: 07/dist
   deploy:
     defaults:
