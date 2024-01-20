@@ -79,7 +79,7 @@ jobs:
   deploy:
     defaults:
       run:
-        working-directory: 07 
+        working-directory: '07' 
     needs: build
     runs-on: ubuntu-latest
     steps:
