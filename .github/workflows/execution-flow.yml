@@ -77,9 +77,6 @@ jobs:
           name: dist-files
           path: 07/dist
   deploy:
-    defaults:
-      run:
-        working-directory: '07' 
     needs: build
     runs-on: ubuntu-latest
     steps:
