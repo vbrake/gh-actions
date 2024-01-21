@@ -1,6 +1,7 @@
 name: Website Deployment
 on:
-  workflow_dispatch:
+  push:
+    - main
 jobs:
   lint:
     defaults:
