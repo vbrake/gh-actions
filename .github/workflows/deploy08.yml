@@ -14,6 +14,8 @@ jobs:
         working-directory: ./08 
     environment: testing
     runs-on: ubuntu-latest
+    container: 
+      image: node:16
     env:
       MONGODB_CONNECTION_PROTOCOL: mongodb+srv
       MONGODB_CLUSTER_ADDRESS: cluster0.7cslpxl.mongodb.net
