@@ -2,6 +2,9 @@ name: Matrix Demo
 on: push
 jobs:
   build:
+    defaults:
+      run:
+        working-directory: ./07 
     strategy:
       matrix:
         node-version: [12, 14, 16]
