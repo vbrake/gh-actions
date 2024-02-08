@@ -5,6 +5,7 @@ on:
       - main
 env:
   WORKING_DIR: "./09"
+  NODE_MODULES_PATH: ${{ env.WORKING_DIR }}/node_modules
 jobs:
   lint:
     defaults:
