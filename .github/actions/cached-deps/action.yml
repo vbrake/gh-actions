@@ -12,5 +12,5 @@ runs:
     - name: Install dependencies
       if: steps.cache.outputs.cache-hit != 'true'
       run: npm ci
-      working-directory: ${{ inputs.working-directory }}
+      working-directory: ${{ env.WORKING_DIR }}
       shell: bash
