@@ -17,7 +17,7 @@ jobs:
       - name: Load and cache dependencies
         uses: ./.github/actions/cached-deps
         with:
-          working_directory: ${{ env.WORKING_DIR }}
+          working-directory: ${{ env.WORKING_DIR }}
       - name: Lint code
         run: npm run lint
   test:
