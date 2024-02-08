@@ -50,6 +50,9 @@ jobs:
           name: test-report
           path: test.json
   build:
+    defaults:
+      run:
+        working-directory: ./09
     needs: test
     runs-on: ubuntu-latest
     steps:
