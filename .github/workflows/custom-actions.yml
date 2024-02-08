@@ -3,11 +3,13 @@ on:
   push:
     branches:
       - main
+env:
+  WORKING_DIR: "./09"
 jobs:
   lint:
     defaults:
       run:
-        working-directory: ./09
+        working-directory: ${{ env.WORKING_DIR }}
     runs-on: ubuntu-latest
     steps:
       - name: Get code
@@ -15,7 +17,7 @@ jobs:
       - name: Load and cache dependencies
         uses: ./.github/actions/cached-deps
         with:
-          working_directory: ${{ jobs.lint.defaults.run.working_directory }}
+          working_directory: ${{ env.WORKING_DIR }}
       - name: Lint code
         run: npm run lint
   test:
